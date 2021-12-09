@@ -3,9 +3,28 @@ import axios from "axios";
 
 const jsonPlaceHolder = 'http://jsonplaceholder.typicode.com/todos/1'
 
+interface Todo {
+    id: number
+    title: string
+    completed: boolean
+}
+
 const getJsonPlaceHolder = () => {
   axios.get(jsonPlaceHolder)
-      .then(r => console.log(r.data))
+      .then(r => {
+        const todo = r.data as Todo;
+        const id = todo.id;
+        const title = todo.title
+        const finisted = todo.completed
+
+        console.log(
+            `
+                The Todo with ID ${id}
+                Has a title of ${title}
+                Is it Completed? ${finisted}
+            `
+        )
+      })
 }
 
 getJsonPlaceHolder();
