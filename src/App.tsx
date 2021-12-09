@@ -15,16 +15,19 @@ const getJsonPlaceHolder = () => {
         const todo = r.data as Todo;
         const id = todo.id;
         const title = todo.title
-        const finisted = todo.completed
+        const completed = todo.completed
+          logTodo(id, title, completed);
+      })
+}
 
-        console.log(
-            `
+const logTodo = (id : number, title : string, completed: boolean) => {
+    console.log(
+        `
                 The Todo with ID ${id}
                 Has a title of ${title}
-                Is it Completed? ${finisted}
+                Is it Completed? ${completed}
             `
-        )
-      })
+    )
 }
 
 getJsonPlaceHolder();
