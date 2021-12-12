@@ -13,7 +13,7 @@ const color = colors[0]
 const color1 = colors.pop();
 
 //Prevent incompatible values
-colors.push(true);
+//colors.push(true);
 
 //Help with 'map'
 colors.map((color : string) : string => {
