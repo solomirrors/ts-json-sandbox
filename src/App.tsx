@@ -1,6 +1,23 @@
 import React from 'react';
 import axios from "axios";
 
+
+let colors: string[] =
+    ['Orange', 'Red', 'Green', 'Yellow', 'Purple', 'Dark']
+let applesCount: number[] = [1, 2, 3, 4, 5]
+let results: boolean[] = [true, false, true, false, true, true, true]
+class Car {}
+let car: Car = new Car();
+
+let point: {x: number; y: number} = {
+    x: 10,
+    y: 5
+}
+
+const logNumber: (i: number) => void = (i: number) => {
+    console.log(i)
+}
+
 const jsonPlaceHolder = 'http://jsonplaceholder.typicode.com/todos/1'
 
 interface Todo {
