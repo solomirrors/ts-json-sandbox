@@ -1,5 +1,16 @@
 import React from 'react';
 import axios from "axios";
+import {Vehicle} from "./classes";
+import {Car as TheCar} from "./classes";
+
+const vehicle = new Vehicle('Black');
+vehicle.drive();
+vehicle.stop();
+
+const theCar = new TheCar(4, 'Silver');
+theCar.startDrivingProcess();
+theCar.stop();
+
 
 
 let colors: string[] =
